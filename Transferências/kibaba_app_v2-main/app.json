@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "KIBABA",
+    "slug": "KIBABA",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/blood.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/blood.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#332D2D"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "permissions": [
+      "notifications"
+    ],
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/blood.png",
+        "backgroundColor": "#332D2D"
+      },
+      "package": "morgadoandrade.KIBABA",
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/blood.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9855e903-992c-4d9b-86ba-58371964396a"
+      }
+    }
+  }
+}

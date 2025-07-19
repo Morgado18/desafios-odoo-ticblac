@@ -1,0 +1,12 @@
+<View key={i} style={styles.webinarItem}>
+                <View style={styles.webinarInfo}>
+                  <Text style={styles.webinarTitle}>{webinar.title}</Text>
+                  <Text style={styles.webinarPresenter}>{webinar.presenter}</Text>
+                  <View style={styles.webinarDateBadge}>
+                    <Text style={styles.webinarDateText}>{webinar.date}</Text>
+                  </View>
+                </View>
+                <TouchableOpacity style={styles.webinarButton}>
+                  <Text style={styles.webinarButtonText}>Inscrever-se</Text>
+                </TouchableOpacity>
+              </View>
