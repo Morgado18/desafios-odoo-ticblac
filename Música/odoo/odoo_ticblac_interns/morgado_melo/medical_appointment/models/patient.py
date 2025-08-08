@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View para Patient (já existente) -->
+    <record id="view_medical_patient_tree" model="ir.ui.view">
+        <field name="name">medical.patient.tree</field>
+        <field name="model">medical.patient</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="birth_date"/>
+                <field name="gender"/>
+                <field name="phone"/>
+                <field name="email"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View para Patient (já existente) -->
+    <record id="view_medical_patient_form" model="ir.ui.view">
+        <field name="name">medical.patient.form</field>
+        <field name="model">medical.patient</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="birth_date"/>
+                        <field name="gender"/>
+                        <field name="phone"/>
+                        <field name="email"/>
+                        <field name="address"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action para Patient (já existente) -->
+    <record id="action_medical_patient" model="ir.actions.act_window">
+        <field name="name">Pacientes</field>
+        <field name="res_model">medical.patient</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Tree View para Doctor -->
+    <record id="view_medical_doctor_tree" model="ir.ui.view">
+        <field name="name">medical.doctor.tree</field>
+        <field name="model">medical.doctor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="speciality"/>
+                <field name="phone"/>
+                <field name="email"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View para Doctor -->
+    <record id="view_medical_doctor_form" model="ir.ui.view">
+        <field name="name">medical.doctor.form</field>
+        <field name="model">medical.doctor</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="speciality"/>
+                        <field name="phone"/>
+                        <field name="email"/>
+                        <field name="active"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action para Doctor -->
+    <record id="action_medical_doctor" model="ir.actions.act_window">
+        <field name="name">Doctors</field>
+        <field name="res_model">medical.doctor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Tree View para Appointment -->
+    <record id="view_medical_appointment_tree" model="ir.ui.view">
+        <field name="name">medical.appointment.tree</field>
+        <field name="model">medical.appointment</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="patient_id"/>
+                <field name="doctor_id"/>
+                <field name="appointment_date"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View para Appointment -->
+    <record id="view_medical_appointment_form" model="ir.ui.view">
+        <field name="name">medical.appointment.form</field>
+        <field name="model">medical.appointment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="patient_id"/>
+                        <field name="doctor_id"/>
+                        <field name="appointment_date"/>
+                        <field name="description"/>
+                        <field name="state"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action para Appointment -->
+    <record id="action_medical_appointment" model="ir.actions.act_window">
+        <field name="name">Appointments</field>
+        <field name="res_model">medical.appointment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_medical_appointment_root" name="Consultas Médicas" sequence="10"/>
+    <menuitem id="menu_medical_patient" name="Pacientes" parent="menu_medical_appointment_root" action="action_medical_patient" sequence="10"/>
+    <menuitem id="menu_medical_doctor" name="Doctors" parent="menu_medical_appointment_root" action="action_medical_doctor" sequence="20"/>
+    <menuitem id="menu_medical_appointment" name="Appointments" parent="menu_medical_appointment_root" action="action_medical_appointment" sequence="30"/>
+</odoo>
