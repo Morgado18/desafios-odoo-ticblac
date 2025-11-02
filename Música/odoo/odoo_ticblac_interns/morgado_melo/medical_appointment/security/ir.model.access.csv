@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_medical_patient,access.medical.patient,medical_appointment.model_medical_patient,,1,1,1,1
-access_medical_doctor,access.medical.doctor,medical_appointment.model_medical_doctor,,1,1,1,1
-access_medical_appointment,access.medical.appointment,medical_appointment.model_medical_appointment,,1,1,1,1
