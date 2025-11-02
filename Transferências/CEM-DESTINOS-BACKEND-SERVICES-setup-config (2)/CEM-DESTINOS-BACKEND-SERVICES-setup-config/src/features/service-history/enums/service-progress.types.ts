@@ -1,0 +1,1 @@
+export type ServiceProgressTypes = "NOT_STARTED" | "PENDING" | "IN_PROGRESS" | "COMPLETED";
